@@ -1,1 +1,642 @@
+:root {
+    --primary: #00A3FF;
+    /* Light Blue (Biru Muda) */
+    --light: #E0F4FF;
+    /* Very Light Blue for backgrounds */
+    --dark: #00566B;
+    /* Dark Blue Text */
+}
 
+/* Bootstrap Overrides to match new Primary (Light Blue) */
+.text-primary {
+    color: #00A3FF !important;
+}
+
+.bg-primary {
+    background-color: #00A3FF !important;
+}
+
+.border-primary {
+    border-color: #00A3FF !important;
+}
+
+.btn-primary {
+    background-color: #00A3FF !important;
+    border-color: #00A3FF !important;
+}
+
+.btn-primary:hover {
+    background-color: #0084CC !important;
+    border-color: #0084CC !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+    color: #0084CC !important;
+}
+
+/* Force bg-light to use our light blue variable */
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+
+
+/*** Heading ***/
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+}
+
+/* Responsive Headings */
+@media (max-width: 992px) {
+    .display-2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-2 {
+        font-size: 2rem;
+    }
+}
+
+.hero-title {
+    font-family: 'Lobster Two', cursive;
+}
+
+h5,
+h6,
+.h5,
+.h6 {
+    font-weight: 600;
+}
+
+
+
+.font-secondary {
+    font-family: 'Heebo', sans-serif;
+}
+
+
+/*** Navbar ***/
+.navbar .navbar-nav .nav-link {
+    padding: 30px 15px;
+    color: var(--dark);
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 15px;
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: calc(100% - 15px);
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.header-carousel,
+.page-header {
+    background: #ffffff;
+}
+
+.header-carousel::before,
+.header-carousel::after,
+.page-header::before,
+.page-header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-header-top.png) center center repeat-x;
+    z-index: 1;
+}
+
+.header-carousel::after,
+.page-header::after {
+    height: 19px;
+    top: auto;
+    bottom: 0;
+    background: #ffffff url(../img/bg-header-bottom.png) center center repeat-x !important;
+    z-index: 10;
+    /* Pastikan di atas overlay gambar */
+}
+
+@media (max-width: 768px) {
+    .header-carousel {
+        margin-top: 0;
+    }
+
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 600px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: #ffffff !important;
+    }
+
+    /* Jarak khusus untuk teks agar tetap di tengah */
+    .header-carousel .owl-carousel-item .container {
+        padding-top: 130px;
+        padding-bottom: 50px;
+    }
+
+    .header-carousel .owl-item,
+    .header-carousel .owl-stage-outer {
+        background: #ffffff !important;
+    }
+
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header-carousel .owl-carousel-item p {
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .header-carousel .owl-carousel-item .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-carousel .owl-carousel-item {
+        min-height: 700px;
+        background: #ffffff !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 26px;
+    }
+
+    .facility-item .facility-text {
+        min-height: 200px;
+        padding: 20px;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: rgba(255, 255, 255, .5);
+}
+
+
+/*** Facility ***/
+.facility-item .facility-icon {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -50px;
+    /* Overlap effect */
+    z-index: 3;
+    position: relative;
+}
+
+/* Facility Icon - white circle behind icon */
+.facility-item .facility-icon::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    /* semi-transparent white or just white */
+    border-radius: 50%;
+    transition: .5s;
+    z-index: 1;
+}
+
+.facility-item .facility-icon span {
+    display: none;
+}
+
+.facility-item .facility-icon i {
+    position: relative;
+    z-index: 2;
+}
+
+/* Pastel Backgrounds */
+.bg-pastel-primary {
+    background-color: #E0F4FF;
+    /* Light Blue */
+}
+
+/* Light Blue */
+.bg-pastel-success {
+    background-color: #E8FFF3;
+}
+
+/* Light Green */
+.bg-pastel-warning {
+    background-color: #FFF9E6;
+}
+
+/* Light Yellow */
+.bg-pastel-info {
+    background-color: #E6F7FF;
+}
+
+/* Light Blue */
+.bg-pastel-danger {
+    background-color: #D1EFFF;
+    /* Another Light Blue shade */
+}
+
+/* Light Blue variant */
+
+.facility-item {
+    transition: .5s;
+}
+
+
+
+/* Card Style for Facilities */
+.facility-item .facility-text {
+    position: relative;
+    min-height: 250px;
+    padding: 30px;
+    border-radius: 20px;
+    /* Slightly rounded square */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* Center content vertically */
+    flex-direction: column;
+    transition: .5s;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .03);
+    /* Very soft shadow default */
+    height: 100%;
+    /* Ensure uniform height in grid */
+}
+
+/* Hover for Card - Rise effect and box shadow */
+.facility-item:hover .facility-text {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+    /* "Bayangan kotak" offset shadow on hover */
+}
+
+
+
+.facility-item .facility-text * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.facility-item * {
+    transition: .5s;
+}
+
+
+
+
+/*** About ***/
+.about-img img {
+    transition: .5s;
+}
+
+.about-img img:hover {
+    background: var(--primary) !important;
+}
+
+
+/*** Classes ***/
+.classes-item {
+    transition: .5s;
+}
+
+.classes-item:hover {
+    margin-top: -10px;
+}
+
+
+/*** Team ***/
+.team-item .team-text {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 17px solid var(--light);
+    border-radius: 250px;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    border-color: var(--primary);
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .testimonial-carousel {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.testimonial-carousel .testimonial-item .border {
+    border: 1px dashed rgba(0, 185, 142, .3) !important;
+}
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 45px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--dark);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 45px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary) !important;
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .form-control {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: #FFFFFF;
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .copyright a:hover,
+.footer .footer-menu a:hover {
+    color: var(--primary) !important;
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}

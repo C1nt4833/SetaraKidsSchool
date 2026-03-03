@@ -31,6 +31,14 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* KB Kecil card styling: soft site-aligned background, keep icons vivid */
+        .kb-card { background-color: #f3f7ff; }
+        @media (prefers-color-scheme: dark) {
+            .kb-card { background-color: rgba(255,255,255,0.04); }
+        }
+        .kb-card .fa, .kb-card .fas, .kb-card .bi { color: #0d6efd; }
+    </style>
 </head>
 
 <body>
@@ -57,14 +65,9 @@
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Beranda</a>
                     <a href="classes.html" class="nav-item nav-link active">Program Belajar</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Halaman</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Fasilitas</a>
-                            <a href="team.html" class="dropdown-item">Profil Guru</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimoni</a>
-                        </div>
-                    </div>
+                    <a href="facility.html" class="nav-item nav-link">Fasilitas</a>
+                    <a href="team.html" class="nav-item nav-link">Profil Guru</a>
+                    <a href="testimonial.html" class="nav-item nav-link">Testimoni</a>
                     <a href="contact.html" class="nav-item nav-link">Kontak</a><a href="login.html"
                         class="nav-item nav-link d-lg-none">Login</a>
                 </div>
@@ -103,8 +106,8 @@
 
                         <h5 class="team-item text-primary mb-3"><i class="fa fa-check-circle me-3"></i>Usia 2 - 3 Tahun
                         </h5>
-                        <h5 class="team-item text-primary mb-3"><i class="fa fa-clock me-3"></i>Waktu Belajar: 08:00 -
-                            10:00</h5>
+                        <h5 class="team-item text-primary mb-3"><i class="fa fa-clock me-3"></i>Waktu Belajar: 09:00 -
+                            11:00</h5>
 
                         <p class="mb-4">Anak-anak akan diajak bermain sambil belajar melalui berbagai aktivitas yang
                             menyenangkan dan edukatif.</p>
@@ -125,25 +128,139 @@
                     </div>
                 </div>
 
-                <div class="row g-5 mt-5">
-                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <h2 class="mb-4">Program & Aktivitas</h2>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fa fa-child text-primary me-2"></i><strong>Stimulasi
-                                    Motorik Kasar & Halus:</strong> Melatih keseimbangan, koordinasi, dan kekuatan otot
-                                melalui bermain aktif.</li>
-                            <li class="list-group-item"><i class="fa fa-users text-primary me-2"></i><strong>Sosialisasi
-                                    Awal:</strong> Belajar berinteraksi dengan teman sebaya dan guru dalam lingkungan
-                                yang aman.</li>
-                            <li class="list-group-item"><i
-                                    class="fa fa-comments text-primary me-2"></i><strong>Pengembangan Bahasa:</strong>
-                                Mengenal kata-kata baru melalui lagu, cerita, dan percakapan sederhana.</li>
-                            <li class="list-group-item"><i
-                                    class="fa fa-paint-brush text-primary me-2"></i><strong>Eksplorasi Kreatif:</strong>
-                                Bermain dengan warna, tekstur, dan bentuk untuk merangsang imajinasi.</li>
-                            <li class="list-group-item"><i class="fa fa-star text-primary me-2"></i><strong>Kemandirian
-                                    Dasar:</strong> Latihan toilet training, mencuci tangan, dan makan mandiri.</li>
+                                <div class="row g-5 mt-5">
+                                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                                        <h2 class="mb-4">Program & Aktivitas</h2>
+                                    </div>
+
+                                    <!-- Practical Life -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-hand-holding-heart"></i></div>
+                                                    <h5 class="card-title mb-0">Practical Life</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Belajar memakai sepatu</li>
+                                                    <li>Mencuci tangan</li>
+                                                    <li>Berlatih memasang kancing / resleting</li>
+                                                    <li>Menyiram tanaman</li>
+                                                    <li>Membersihkan area bermain</li>
+                                                    <li>Mengelap meja</li>
+                                                    <li>Menuang air</li>
+                                                    <li>Menyendok biji-bijian dan bahan kecil</li>
+                                                    <li>Mengupas buah / telur</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sensorial -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-eye"></i></div>
+                                                    <h5 class="card-title mb-0">Sensorial</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Visual: permainan mencocokkan warna dan bentuk sederhana</li>
+                                                    <li>Taktil: mengenal tekstur melalui kotak sensorik</li>
+                                                    <li>Auditori: permainan bunyi dan lagu sederhana</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Language -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-language"></i></div>
+                                                    <h5 class="card-title mb-0">Language</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Melatih kosakata melalui benda sehari-hari, lagu, dan cerita</li>
+                                                    <li>Pra membaca: mengenal huruf dan gambar melalui buku bergambar</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mathematics -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.25s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-square-root-alt"></i></div>
+                                                    <h5 class="card-title mb-0">Matematika</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Mengenal angka melalui nyanyian dan permainan</li>
+                                                    <li>Menghitung jumlah kecil menggunakan benda nyata (1–5)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Culture & Science -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-globe"></i></div>
+                                                    <h5 class="card-title mb-0">Culture & Science</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Sains sederhana: eksperimen aman dengan air, pasir, dan benda sehari-hari</li>
+                                                    <li>Geografi: mengenal lingkungan sekitar dan peta/foto tempat sederhana</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Motorik Kasar -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.35s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-running"></i></div>
+                                                    <h5 class="card-title mb-0">Aktivitas Motorik Kasar</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Berjalan mengikuti garis di lantai</li>
+                                                    <li>Memanjat area aman</li>
+                                                    <li>Menendang bola</li>
+                                                    <li>Melompat dengan pola sederhana</li>
+                                                    <li>Latihan keseimbangan</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Motorik Halus -->
+                                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="card h-100 shadow-sm border-0 kb-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="me-3 fs-3 text-primary"><i class="fas fa-hand-paper"></i></div>
+                                                    <h5 class="card-title mb-0">Aktivitas Motorik Halus</h5>
+                                                </div>
+                                                <ul class="mb-0">
+                                                    <li>Finger painting (melukis pakai tangan)</li>
+                                                    <li>Meremas, menggulung, dan membentuk adonan untuk melatih genggaman</li>
+                                                    <li>Mencoret / menggambar</li>
+                                                    <li>Menggunting dengan gunting aman untuk anak</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </ul>
+
+                        
                     </div>
                 </div>
 

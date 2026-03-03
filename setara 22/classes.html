@@ -31,6 +31,35 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .featured-card {
+            background: linear-gradient(135deg, #f3f7ff 0%, #ffffff 100%);
+            border: 2px solid #e0e7ff;
+            transition: all 0.3s ease;
+        }
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(13, 110, 253, 0.2);
+            border-color: #0d6efd;
+        }
+        .featured-card .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: #0d6efd;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .featured-section {
+            background: linear-gradient(135deg, #eaf6ff 0%, #e6f2ff 100%); /* soft blue */
+            padding: 60px 0;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
@@ -57,16 +86,11 @@
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Beranda</a>
                     <a href="classes.html" class="nav-item nav-link active">Program Belajar</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Halaman</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Fasilitas</a>
-                            <a href="team.html" class="dropdown-item">Profil Guru</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimoni</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Kontak</a><a href="login.html"
-                        class="nav-item nav-link d-lg-none">Login</a>
+                    <a href="facility.html" class="nav-item nav-link">Fasilitas</a>
+                    <a href="team.html" class="nav-item nav-link">Profil Guru</a>
+                    <a href="testimonial.html" class="nav-item nav-link">Testimoni</a>
+                    <a href="contact.html" class="nav-item nav-link">Kontak</a>
+                    <a href="login.html" class="nav-item nav-link d-lg-none">Login</a>
                 </div>
                 <a href="login.html" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Login<i
                         class="fa fa-arrow-right ms-3"></i></a>
@@ -157,38 +181,98 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Classes End -->
 
-                <div class="row g-5 mt-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h2 class="mb-4">Program Pembelajaran</h2>
-                        <p>Setara Kids School menjalankan program belajar tematik sesuai dengan tingkat usia anak.</p>
-                        <ol class="list-group list-group-numbered list-group-flush">
-                            <li class="list-group-item">Pra literasi SKILL</li>
-                            <li class="list-group-item">Pra-Academic skill</li>
-                            <li class="list-group-item">Practical life skill</li>
-                            <li class="list-group-item">Outing class</li>
-                            <li class="list-group-item">Bimbingan belajar</li>
-                        </ol>
+        <!-- Featured Programs Start -->
+        <div class="featured-section">
+            <div class="container-xxl">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+                        <h2 class="mb-3">Program Unggulan Setara Kids School</h2>
+                        <p class="text-muted">Kami menyediakan program pembelajaran yang komprehensif dan terstruktur, dirancang khusus untuk mendukung perkembangan optimal setiap anak sesuai tahapan usianya.</p>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <h2 class="mb-4">Program Unggulan</h2>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Kegiatan belajar
-                                mengajar yang aman dan nyaman</li>
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Nilai agama dan
-                                moral</li>
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Movie class</li>
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Kegiatan akhir
-                                pekan (eksplorasi nyata)</li>
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Life skill</li>
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Seni</li>
-                            <li class="list-group-item"><i class="fa fa-check text-primary me-2"></i>Fisik-motorik</li>
-                        </ul>
+
+                    <div class="row g-4">
+                        <!-- Pra-Literasi Skill -->
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="card featured-card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <div class="icon-box"><i class="fas fa-book"></i></div>
+                                    <h5 class="card-title mb-3">Pra-Literasi Skill</h5>
+                                    <ul class="list-unstyled text-muted" style="font-size: 0.95rem;">
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Pemahaman bahasa lisan (berbicara dan mendengarkan)</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Pemahaman dan pengenalan buku; pemahaman kata dan bunyi</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Pengenalan huruf / alphabet / numerik</li>
+                                        <li><i class="fa fa-check text-primary me-2"></i>Pengenalan dan pemahaman tulisan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pra-Academic Skill -->
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
+                            <div class="card featured-card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+                                    <h5 class="card-title mb-3">Pra-Academic Skill</h5>
+                                    <ul class="list-unstyled text-muted" style="font-size: 0.95rem;">
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Duduk di meja dengan fokus</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Peningkatan fokus dan konsentrasi</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Integrasi visual motorik</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Integrasi auditorik</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Kontrol motorik halus</li>
+                                        <li><i class="fa fa-check text-primary me-2"></i>Postur keseimbangan</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Practical Life Skill -->
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card featured-card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <div class="icon-box"><i class="fas fa-hands"></i></div>
+                                    <h5 class="card-title mb-3">Practical Life Skill</h5>
+                                    <ul class="list-unstyled text-muted" style="font-size: 0.95rem;">
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Kebiasaan berdoa dan nilai agama</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Kemandirian (mengenakan sepatu, pakaian, dll)</li>
+                                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Kedisiplinan dan tanggung jawab</li>
+                                        <li><i class="fa fa-check text-primary me-2"></i>Kebiasaan hidup sehat dan bergizi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Outing Class -->
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="card featured-card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <div class="icon-box"><i class="fas fa-tree"></i></div>
+                                    <h5 class="card-title mb-3">Outing Class</h5>
+                                    <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Kegiatan belajar mengajar yang diadakan di luar kelas—media paling efektif dan efisien dalam menyampaikan pembelajaran berbasis pembuktian lapangan secara langsung, bukan hanya teori semata.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bimbingan Belajar -->
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="card featured-card h-100 shadow-sm border-0">
+                                <div class="card-body">
+                                    <div class="icon-box"><i class="fas fa-chalkboard"></i></div>
+                                    <h5 class="card-title mb-3">Bimbingan Belajar</h5>
+                                    <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Pembelajaran berbasis komunikatif dan inovatif di tingkat TK, di mana siswa diajak bermain sambil belajar tanpa melupakan penguasaan membaca, berhitung sebagai bekal pendidikan lanjutan.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Classes End -->
+        <!-- Featured Programs End -->
+
+  
 
 
         <!-- Appointment Start -->

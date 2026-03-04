@@ -1,6 +1,6 @@
 Setara22 Project License
 
-Copyright (c) 2026 Setara22 Contributors
+Copyright (c) 2026 Setara 22 Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -28,5 +28,5 @@ so, subject to the following conditions:
 4. For any usage not covered by the terms above, please contact the project
    maintainers via the repository or project website.
 
-This license replaces any previous terms. Continued use of the Setara22 code
+This license replaces any previous terms. Continued use of the Setara 22 code
 constitutes acceptance of this license.
